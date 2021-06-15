@@ -33,7 +33,7 @@ $networks = Get-AzVirtualNetwork
             SubnetName     = $subnet
             AddressRange   = $addressrange
             }
-        $result += New-Object psobject -Property $prop | select VirtualNetwork, Subscription, Type, SubnetName, AddressRange
+        $result += New-Object psobject -Property $prop | Select-Object VirtualNetwork, Subscription, Type, SubnetName, AddressRange
         }
 
         foreach($subn in $net.Subnets){
@@ -47,7 +47,7 @@ $networks = Get-AzVirtualNetwork
             SubnetName     = $subnet
             AddressRange   = $subn.AddressPrefix[0]
             }
-        $result += New-Object psobject -Property $prop | select VirtualNetwork, Subscription, Type, SubnetName, AddressRange
+        $result += New-Object psobject -Property $prop | Select-Object VirtualNetwork, Subscription, Type, SubnetName, AddressRange
         }
     }
 }
