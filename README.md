@@ -1,2 +1,4 @@
-# powershellscripts
-just some powershell scripts i shared
+# Azure
+
+# Home Assistant
+some scripts related to Home Assistant
