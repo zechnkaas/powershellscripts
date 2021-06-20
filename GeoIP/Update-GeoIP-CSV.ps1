@@ -6,7 +6,7 @@ Function dl {
     param([Parameter(ValueFromPipeline=$true)]$pip, $par)
     $logtime = (get-date) - $starttime
     Write-Host ("{0:G}" -f $logtime) $pip -ForegroundColor Yellow}
-     
+
 $starttime = Get-Date
 $update    = $false
 
