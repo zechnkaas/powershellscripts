@@ -13,7 +13,7 @@ $update    = $false
 "starting" | dl 
 
 # if you run this script interactivly in powersell ise or visual studio code
-# change the $dir variable to the script path this is where the files are beein downloaded
+# change the $dir variable to the script path this is where the files are beeing downloaded
 # and extracted
 if($PSScriptRoot){
     "starting scripted" | dl
@@ -62,7 +62,7 @@ if($update){
     "Downloading" | dl
     $file = $dir + "\" + $check.Headers.'Content-Disposition'.Substring($check.Headers.'Content-Disposition'.IndexOf("=")+1)
     Invoke-WebRequest -Uri $url -OutFile $file
-# uncomment to automatically exctract the files and dele the archives
+# uncomment to automatically exctract the files and delete the archives
 #    "Extracting" | dl
 #    7z e $file -o"$dir" -aoa
 #    "delete archive" | dl
