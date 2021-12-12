@@ -37,7 +37,7 @@ $message      = "Test message"
 
 
 $data = @"
-{"message": "$message","number": "$apisender","recipients" : ["$recipient"]}
+{"message": "$message","number": "$phonenumber","recipients" : ["$recipient"]}
 "@
 
 Invoke-RestMethod -Method Post -ContentType "application/json" -Uri ($apiurl + "/v2/send") -Body $data
