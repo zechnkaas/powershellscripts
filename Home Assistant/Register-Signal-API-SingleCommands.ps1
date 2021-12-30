@@ -23,7 +23,7 @@ Invoke-RestMethod -Method Post -ContentType "application/json" -Uri ($apiurl + "
 $captchatoken = "damnlongstring"          # paste captcha token here after you have resolved it
 
 $data = @"
-#{"captcha": "$captchatoken"}
+{"captcha": "$captchatoken"}
 "@
 
 Invoke-RestMethod -Method Post -ContentType "application/json" -Uri ($apiurl + "/v1/register/" + $phonenumber) -Body $data
