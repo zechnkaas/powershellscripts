@@ -33,7 +33,7 @@ foreach($domain in $ADForest.Domains){
         $count++
    }
 }
-$count
+"" + $count + " total DCs found in forest" | dl -color yellow
 
 "trying to read from all DCs" | dl
 

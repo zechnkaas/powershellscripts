@@ -52,7 +52,7 @@ foreach($domain in $ADForest.Domains){
         $count++
    }
 }
-$count
+"" + $count + " total DCs found in forest" | dl -color yellow
 
 "Creating Audit events" | dl
 
